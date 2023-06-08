@@ -1,0 +1,46 @@
+@import '../../index.scss';
+
+.carousel {
+
+    .item-left {
+        width: 62%;
+    }
+
+    .item-right {
+        width: 48%;
+        padding: 10% 5% 15% 5%;
+
+        .name {
+            height: 4rem;
+            font-size: 40px;
+        }
+
+        .description {
+            height: 5rem;
+            font-size: 20px;
+        }
+
+        .btn {
+            background: $bg-c1-warning;
+            padding: 13px 35px;
+        }
+    }
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    width: 1.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    &.next{
+        right: 10px;
+    }
+    &.prev{
+        left: 10px;
+    }
+}
+.slick-dots{
+    bottom: 10px;
+}
+

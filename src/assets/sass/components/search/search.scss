@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+.search-box{
+    input{
+        background: $bg-c4-light;
+        border-radius: $bd-c1-radius;
+        border: none;
+    }
+    button{
+        background: $bg-c1-primary;
+        box-shadow: $sd-search;
+        color: $text-c1-light;
+        &:hover{
+            color: $text-c1-dark;
+        }
+    }
+}

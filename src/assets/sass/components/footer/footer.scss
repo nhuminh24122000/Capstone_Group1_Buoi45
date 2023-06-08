@@ -1,0 +1,18 @@
+@import '../../index.scss';
+
+footer {
+    .menu {
+        position: relative;
+        z-index: 10;
+        box-shadow: $sd-dark-25;
+        a {
+            color: $text-c1-dark;
+        }
+    }
+
+    .rectangle {
+        position: relative;
+        z-index: 5;
+        background-color: $bg-c1-secondary;
+    }
+}
