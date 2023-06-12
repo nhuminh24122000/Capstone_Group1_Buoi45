@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+header {
+    .search {
+        position: relative;
+
+        .button-search {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+}

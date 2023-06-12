@@ -1,8 +1,13 @@
 import React from 'react'
+import Carou from '../../components/Carousel/Carousel'
+import ProductFeature from '../../components/ProductFeature/ProductFeature'
 
-function Home() {
+const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Carou/>
+      <ProductFeature/>
+    </div>
   )
 }
 

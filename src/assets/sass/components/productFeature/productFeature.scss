@@ -1,0 +1,36 @@
+@import "../../index.scss";
+
+.productFeature {
+  background: $bg-c2-light;
+  .title {
+    background: $linear-1;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination span {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination span.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination span:hover:not(.active) {
+  background-color: #ddd;
+}
