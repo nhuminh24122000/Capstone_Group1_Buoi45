@@ -1,0 +1,89 @@
+.login-container {
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+    height: 85vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .login-wrapper {
+        display:flex;
+        justify-content: center;
+        background-color: #fff;
+        width: 50%;
+        margin: 0 auto;
+        padding: 5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 40px rgba($color: #000000, $alpha: 0.2);
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+        }
+        .remember {
+            margin-left: 5px;
+        }
+    }
+    .login-left {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+        a {
+            margin-left: 25%;
+            font-size: 1.4rem;
+        }
+    }
+    .login-right {
+        margin-left: 5rem;
+        width: 50%;
+        h1 {
+            margin-bottom: 2rem;
+        }
+        .register-info {
+            display:flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            span {
+                margin-left: 0.5rem;
+            }
+            .register-icon {
+                margin-right: 1rem;
+                i {
+                    margin-top: 5px;
+                }
+            }
+            .register-input {
+                width: 100%;
+            }
+        }
+        .login-fb {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        input[type="email"], input[type="password"] {
+            border: none;
+            margin: 0;
+            outline: none;
+            border-bottom: 1px solid #ccc;
+            width: 90%;
+            padding-bottom: 1rem;
+        }
+        .btn-sign-in {
+            margin: 3rem 0 2rem;
+            padding: 2rem;
+            background-image: linear-gradient(to right, #a5f7c6, #fbd786, #f7797d);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: #000000;
+            width: 100%;
+            transition: 0.3s linear;
+            &:hover {
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.4);
+            }
+        }
+    }
+}
