@@ -1,0 +1,51 @@
+.header-home-template {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 0 2.4rem;
+	background-color: #000000;
+    height: 5rem; // 50px
+
+	.header-nav-right,
+	.header-search {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		// font-size: 20px;
+		// 2em: 20px * 2 = 40;
+		.icon-cart {
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+	.header-text-search {
+		font-size: 3rem;
+		user-select: none;
+	}
+
+	.header-link {
+		text-decoration: none;
+	}
+
+	.header-link,
+	.header-text-search {
+		font-weight: 300;
+	}
+	.logout, .header-link {
+		background-color: #ccc;
+		padding: 10px 15px;
+		border: none;
+		outline: none;
+		border-radius: 10px;
+		font-size: 1.6rem;
+		color: #000;
+		cursor: pointer;
+		box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+		transition: 0.2s linear;
+		&:hover {
+			background-color: rgb(102, 35, 210);
+			color: #ffffff;
+		}
+	}
+}
