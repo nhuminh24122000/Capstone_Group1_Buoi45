@@ -1,23 +1,23 @@
 .register-container {
-    // background-image: url('../../assets/imgs/seamless-background-from-images-sport-shoes-vector-20245701.jpg');
+    background-image: url('../../assets/imgs/shoes-background.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 50rem;
     padding: 3rem;
     .register-wrapper {
         display:flex;
         flex-direction:  column;
         background-color: #fff;
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
-        height: 82vh;
+        // height: 80%;
         padding: 2rem 4rem 4rem;
         border-radius: 10px;
         box-shadow: 0 0 40px rgba($color: #000000, $alpha: 0.2);
         h1 {
             text-align: center;
-            font-size: 4rem;
+            font-size: 3rem;
         }
         .register-form {
             display:flex;
@@ -25,15 +25,16 @@
             flex-wrap: wrap;
             margin-bottom: 1rem;
             div {
-                margin-top: 1.5rem;
+                margin-top: 1.2rem;
             }
             label {
                 margin-right: 1rem;
             }
             input {
-                padding: 1rem;
+                padding: 8px 10px;
                 border-radius: 6px;
                 border: 1px solid #b1aeae;
+                margin: 0.5rem 0;
                 outline: none;
                 width: 90%;
             }
@@ -55,12 +56,12 @@
             display:flex;
             align-items: center;
             span {
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
         }
         .btn-sign-up {
-            margin: 3rem 0 2rem;
-            padding: 2rem;
+            margin: 2rem 0 1rem;
+            padding: 1rem;
             background-image: linear-gradient(to right, #a5f7c6, #fbd786, #f7797d);
             border: none;
             border-radius: 5px;

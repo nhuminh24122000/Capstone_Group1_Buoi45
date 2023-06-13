@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'Yup';
 import axios from 'axios';
 import { ACCESS_TOKEN, saveLocalStorage } from '../../util/index';
+import shoesPng from '../../assets/imgs/shoe_login.png'
 
 const schemaLogin = Yup.object({
   email: Yup.string()
@@ -54,7 +55,7 @@ function Login() {
       <div className="login-container">
         <div className="login-wrapper">
           <div className="login-left">
-            <img src="../../assets/imgs/shoes_login.png" alt="" />
+            <img src={shoesPng} alt="" />
             <NavLink to="/register">Create an account?</NavLink>
           </div>
           <div className="login-right">
@@ -92,7 +93,13 @@ function Login() {
               <span className='remember'>Remember me</span>
             </div>
             <button type='submit' className="btn-sign-in">SIGN IN</button>
-            </div>
+            <ul>
+              <span>Or login with</span>
+              <li><a href=""><i className="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href=""><i className="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i className="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </form>

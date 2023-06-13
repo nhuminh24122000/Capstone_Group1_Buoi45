@@ -10,5 +10,25 @@ header {
             left: 0;
         }
     }
-
+    .logout, .header-link {
+		background-color: #ccc;
+		padding: 5px 10px;
+		border: none;
+		outline: none;
+		border-radius: 10px;
+		font-size: 1rem;
+		color: #000;
+		cursor: pointer;
+		box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+		transition: 0.2s linear;
+		&:hover {
+			background-color: rgb(102, 35, 210);
+			color: #ffffff;
+		}
+	}
+    .header-user {
+        margin: 6px 1.5rem 0;
+        cursor: pointer;
+        color: #fff;
+    }
 }

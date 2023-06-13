@@ -1,14 +1,37 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { USER_LOGIN, ACCESS_TOKEN } from "../../util/index";
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { USER_LOGIN, ACCESS_TOKEN, deleteKey } from "../../util/index";
 
 import logoSVG from '../../assets/imgs/logo.svg'
 
 import '../../assets/sass/components/header/header.scss'
 import { getSearch } from "../../redux/reducers/productReducer";
+import { resetUserProfile } from '../../redux/slices/User';
 
 const Header = () => {
+  const { userProfile } = useSelector(state => state.userReducer)
+	const navigate = useNavigate();
+
+	const handleLogout = () => {
+		// chuyen ve login, xoa localstorage, reset userProfile tren redux
+		navigate('/login');
+		deleteKey(ACCESS_TOKEN)
+		const action = resetUserProfile();
+		dispatch(action)
+
+		// call 1 api cho ben server
+
+	}
+
+	const navigateToCart = () => {
+		if (!userProfile.email) {
+			alert('You must login')
+			navigate('/login')
+		}
+		navigate('/carts')
+	}
+
   const [styleInput, setStyleInput] = useState('d-none')
   const [styleButton, setStyleButton] = useState('')
   const dispatch = useDispatch()
@@ -69,12 +92,29 @@ const Header = () => {
             </div>
             <div className="d-flex my-2 my-lg-0">
               <NavLink className="btn text-light" to="/cart">
-                <i className="fa fa-cart-arrow-down">
+                <i onClick={navigateToCart} className="fa fa-cart-arrow-down icon-cart">
                   <span className="ms-1">(1)</span>
                 </i>
               </NavLink>
-              <NavLink className="btn text-light" to="/login"> Login </NavLink>
-              <NavLink className="btn text-light" to="/register"> Register </NavLink>
+              
+              {/* Render ra các button tùy theo trạng thái người dùng có log in hay không */}
+              {userProfile.email ? (
+						<>
+							<p onClick={() => {
+								navigate('/profile')
+							}} className='header-user'>{userProfile.email}</p>
+							<button className='logout' onClick={handleLogout}>Logout</button>
+						</>
+					) : (
+						<>
+							<NavLink className={'btn text-light header-link'} to={'/login'}>
+								Login
+							</NavLink>
+							<NavLink className={'btn text-light header-link'} to={'/register'}>
+								Register
+							</NavLink>
+						</>
+					)}
             </div>
           </div>
         </div>

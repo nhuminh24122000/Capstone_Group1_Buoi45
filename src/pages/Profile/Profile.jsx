@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileThunk } from "../../redux/slices/User";
 import "./Profile.scss";
@@ -29,7 +29,7 @@ const schemaProfile = Yup.object({
 
 function Profile() {
   const dispatch = useDispatch();
-  const { userProfile } = useSelector((state) => state.UserReducer);
+  const { userProfile } = useSelector((state) => state.userReducer);
   const [type, setType] = useState(tabs[0]);
   const [stateBtn, setStateBtn] = useState(true);
   const formik = useFormik({
@@ -79,7 +79,6 @@ function Profile() {
     file.preview = URL.createObjectURL(file);
     userProfile.avatar = file.preview;
 
-    console.log(userProfile.avatar);
     setAvatar(userProfile.avatar);
   };
 
@@ -123,7 +122,6 @@ function Profile() {
           </ul>
         </div>
         <div className="profile-right">
-          <h1>Profile</h1>
           <h3>{type}</h3>
           <div className="profile-content">
             <form onSubmit={formik.handleSubmit}>
@@ -197,7 +195,7 @@ function Profile() {
                       <button
                         type="submit"
                         id="edit"
-                        className="account-btn"
+                        className="profile-btn"
                         onClick={handleChangeBtn}
                       >
                         Edit
@@ -206,7 +204,7 @@ function Profile() {
                       <button
                         id="update"
                         type="button"
-                        className="account-btn"
+                        className="profile-btn"
                         onClick={handleChangeBtn}
                       >
                         Update
@@ -238,8 +236,8 @@ function Profile() {
                 />
               </div>
               <div className="password-button">
-                <button>Edit</button>
-                <button>Cancel</button>
+                <button className="profile-btn">Edit</button>
+                <button className="profile-btn">Cancel</button>
               </div>
             </div>
             <div
