@@ -10,14 +10,6 @@ const Cart = lazy(() => import('./pages/Cart/Cart'));
 const Search = lazy(() => import('./pages/Search/Search'));
 const Profile = lazy(() => import('./pages/Profile/Profile'));
 
-// import Home from './pages/Home/Home'
-// import Login from './pages/Login/Login'
-// import Register from './pages/Register/Register'
-// import Cart from './pages/Cart/Cart'
-// import Detail from './pages/Detail/Detail'
-// import Search from './pages/Search/Search'
-// import Profile from './pages/Profile/Profile'
-
 function App() {
     return (
         <BrowserRouter>
