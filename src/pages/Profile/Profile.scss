@@ -42,8 +42,8 @@
                 }
                 i {
                     position: absolute;
-                    top: 40px;
-                    right: 45px;
+                    top: 3.5rem;
+                    right: 4.5rem;
                     display: flex;
                     z-index: 999;
                     justify-content: center;
@@ -51,7 +51,7 @@
                     border-radius: 50%;
                     background-color: #9977d8;
                     color: #fff;
-                    padding: 1rem;
+                    padding: 0.7rem;
                     font-weight: 300;
                 }
                 input[type="file"] {

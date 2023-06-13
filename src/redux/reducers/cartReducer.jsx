@@ -25,7 +25,7 @@ const cartReducer = createSlice({
         },
         deleteProductCartAction: (state, action) => {
             const { id } = action.payload;
-            state.userCart = state.userCart.filter((item) => item.id !== id);
+            state.userCart = state.userCart.filter((item) => item.product.id !== id);
         },
     },
 });
