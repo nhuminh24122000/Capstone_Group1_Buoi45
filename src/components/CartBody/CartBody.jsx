@@ -41,6 +41,7 @@ export default function CartBody() {
         </thead>
         <tbody>
           {userCart.map((item, index) => {
+            console.log(item)
             return (
               <tr key={index}>
                 <td>
@@ -92,8 +93,9 @@ export default function CartBody() {
                     className={styles["btn-delete"]}
                     onClick={() => {
                       const action = deleteProductCartAction({
-                        id: item.id,
+                        id: item.product.id,
                       });
+                      console.log(action)
                       dispatch(action);
                     }}
                   >
@@ -105,11 +107,6 @@ export default function CartBody() {
           })}
         </tbody>
       </table>
-      <button
-        className={styles["btn-submit-order"]}
-      >
-        Submit Order
-      </button>
     </>
   );
 }

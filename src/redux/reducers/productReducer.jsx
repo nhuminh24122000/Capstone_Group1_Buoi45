@@ -32,16 +32,16 @@ export const { getSearch, getProduct, getProductDetail, getProductSearch } = pro
 export default productReducer.reducer;
 
 export const getProductApi = () => {
-    return async (dispacth) => {
+    return async (dispatch) => {
         const result = await http.get('/api/Product')
         const actionProduct = getProduct(result.data.content)
-        dispacth(actionProduct)
+        dispatch(actionProduct)
     }
 }
 export const getProductDetailApi = (id) => {
-    return async (dispacth) => {
+    return async (dispatch) => {
         const result = await http.get(`/api/Product/getbyid?id=${id}`)
         const actionDetail = getProductDetail(result.data.content)
-        dispacth(actionDetail)
+        dispatch(actionDetail)
     }
 }

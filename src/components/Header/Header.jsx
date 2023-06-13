@@ -11,6 +11,7 @@ import { resetUserProfile } from '../../redux/slices/User';
 
 const Header = () => {
   const { userProfile } = useSelector(state => state.userReducer)
+  const { userCart } = useSelector((state) => state.cartReducer);
 	const navigate = useNavigate();
 
 	const handleLogout = () => {
@@ -27,9 +28,11 @@ const Header = () => {
 	const navigateToCart = () => {
 		if (!userProfile.email) {
 			alert('You must login')
-			navigate('/login')
+			 navigate('/login')
+       return
 		}
-		navigate('/carts')
+    console.log('run')
+		navigate('/cart')
 	}
 
   const [styleInput, setStyleInput] = useState('d-none')
@@ -91,11 +94,11 @@ const Header = () => {
               </div>
             </div>
             <div className="d-flex my-2 my-lg-0">
-              <NavLink className="btn text-light" to="/cart">
+              <div className="btn text-light" >
                 <i onClick={navigateToCart} className="fa fa-cart-arrow-down icon-cart">
-                  <span className="ms-1">(1)</span>
+                  <span className="ms-1">({userCart.length})</span>
                 </i>
-              </NavLink>
+              </div>
               
               {/* Render ra các button tùy theo trạng thái người dùng có log in hay không */}
               {userProfile.email ? (
