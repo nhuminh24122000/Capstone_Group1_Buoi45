@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfileThunk } from "../../redux/slices/User";
 import "./Profile.scss";
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 import { useFormik } from "formik";
 import { axiosWithAuth } from "../../services/config.services";
 
