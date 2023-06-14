@@ -57,13 +57,13 @@ export default function CartBody() {
             <th>
               <input type="checkbox" />
             </th>
-            <th>id</th>
-            <th>img</th>
-            <th>name</th>
-            <th>price</th>
-            <th>quantity</th>
-            <th>total</th>
-            <th>action</th>
+            <th>Id</th>
+            <th>Img</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

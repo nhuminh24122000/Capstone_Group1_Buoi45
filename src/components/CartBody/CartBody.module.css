@@ -36,3 +36,7 @@
   padding: 6px 8px;
   margin-left: 82%;
 }
+
+th, td {
+  text-align: center;
+}
