@@ -11,19 +11,18 @@ header {
         }
     }
     .logout, .header-link {
-		background-color: #ccc;
+		background-color: transparent;
 		padding: 5px 10px;
 		border: none;
 		outline: none;
+		color: #ffffff;
 		border-radius: 10px;
 		font-size: 1rem;
-		color: #000;
 		cursor: pointer;
 		box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
 		transition: 0.2s linear;
 		&:hover {
 			background-color: rgb(102, 35, 210);
-			color: #ffffff;
 		}
 	}
     .header-user {
