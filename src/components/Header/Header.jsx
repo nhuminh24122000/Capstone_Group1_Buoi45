@@ -110,10 +110,10 @@ const Header = () => {
 						</>
 					) : (
 						<>
-							<NavLink className={'btn text-light header-link'} to={'/login'}>
+							<NavLink className={'header-link'} to={'/login'}>
 								Login
 							</NavLink>
-							<NavLink className={'btn text-light header-link'} to={'/register'}>
+							<NavLink className={'header-link'} to={'/register'}>
 								Register
 							</NavLink>
 						</>

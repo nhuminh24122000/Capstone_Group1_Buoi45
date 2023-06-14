@@ -6,6 +6,7 @@ import * as Yup from 'Yup';
 import { useFormik } from "formik";
 import { axiosWithAuth } from "../../services/config.services";
 
+// List Name Tabs
 const tabs = [
   "Account Settings",
   "Change Password",
@@ -13,6 +14,7 @@ const tabs = [
   "Favourite Products",
 ];
 
+// Validation
 const schemaProfile = Yup.object({
   userName: Yup.string()
     .required('UserName must fill in this section')
@@ -29,6 +31,7 @@ const schemaProfile = Yup.object({
 
 function Profile() {
   const dispatch = useDispatch();
+  // call api data user
   const { userProfile } = useSelector((state) => state.userReducer);
   const [type, setType] = useState(tabs[0]);
   const [stateBtn, setStateBtn] = useState(true);

@@ -57,6 +57,8 @@ function Register() {
       })
       console.log(resp);
       // chuyen ve trang login
+      alert('Register Successful!')
+
       navigate('/login');
 
       } catch (err) {
