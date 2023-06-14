@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteProductCartAction,
   updateCartAction,
+  submitOrderApi,
 } from "../../redux/reducers/cartReducer";
 import styles from "./CartBody.module.css";
 
 export default function CartBody() {
   const dispatch = useDispatch();
   const { userCart } = useSelector((state) => state.cartReducer);
+  const { userProfile } = useSelector(state => state.userReducer)
+  const [orders, setOrders] = useState();
+
+  const renderOrderProduct = () => {
+    let arrOrders = userCart.map((item) => {
+      const productOrder = {
+        productId: String(item.product.id),
+        quantity: Number(item.quantity),
+      };
+      return productOrder;
+    });
+    const data = {
+      orderDetail: arrOrders,
+      email: String(userProfile.email),
+    };
+    setOrders(data);
+  };
 
   const handleUpdateCartQuantity = (idProduct, value) => {
     const action = updateCartAction({
@@ -16,6 +34,15 @@ export default function CartBody() {
       value: value,
     });
     dispatch(action);
+  };
+
+  useEffect(() => {
+    renderOrderProduct();
+  }, [userCart]);
+
+  const handleSubmitOrder = () => {
+    const actionAsync = submitOrderApi(orders);
+    dispatch(actionAsync);
   };
 
   return (
@@ -107,6 +134,12 @@ export default function CartBody() {
           })}
         </tbody>
       </table>
+      <button
+        className={styles["btn-submit-order"]}
+        onClick={handleSubmitOrder}
+      >
+        Submit Order
+      </button>
     </>
   );
 }
