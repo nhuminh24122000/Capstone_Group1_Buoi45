@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 
 //Yup để validate
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 import axios from 'axios';
 
 const schemaRegister = Yup.object({

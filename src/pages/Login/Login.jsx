@@ -2,7 +2,7 @@ import React from 'react'
 import './Login.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 import axios from 'axios';
 import { ACCESS_TOKEN, saveLocalStorage } from '../../util/index';
 import shoesPng from '../../assets/imgs/shoe_login.png'
