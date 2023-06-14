@@ -105,7 +105,7 @@ const Header = () => {
 						<>
 							<p onClick={() => {
 								navigate('/profile')
-							}} className='header-user'>{userProfile.email}</p>
+							}} className='header-user'>Hello, {userProfile.email}</p>
 							<button className='logout' onClick={handleLogout}>Logout</button>
 						</>
 					) : (
