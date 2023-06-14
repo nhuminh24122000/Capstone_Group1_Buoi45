@@ -11,9 +11,6 @@ export default function Cart() {
       <div className="row">
         <CartBody />
       </div>
-      <div className="row">
-        <button className={styles["btn-submit-order"]}>Submit Order</button>
-      </div>
     </div>
   );
 }
