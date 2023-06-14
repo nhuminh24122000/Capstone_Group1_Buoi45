@@ -67,8 +67,7 @@ export default function Footer() {
       <div className="rectangle">
         <div className="text-center pt-3 pb-2">
           <p>
-            © 2022 Cybersoft All Rights Reserved | Design Theme by Trương Tấn
-            Khải.
+            © 2022 Cybersoft All Rights Reserved
           </p>
         </div>
       </div>
